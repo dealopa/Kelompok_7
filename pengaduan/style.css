@@ -7,13 +7,13 @@
 }
 
 body {
-    background: #fceef5; /* pink sangat lembut */
+    background: #ecf4fb; /* biru sangat lembut */
     color: #333;
     line-height: 1.6;
 }
 
 header {
-    background: #e84393; /* pink gelap */
+    background: #2c3e50; /* biru tua */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -36,7 +36,7 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    color: #ffd6e0; /* pink muda saat hover */
+    color: #5dade2; /* biru muda saat hover */
 }
 
 .container {
@@ -50,12 +50,12 @@ nav a:hover {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(232, 67, 147, 0.2); /* shadow pink */
+    box-shadow: 0 2px 5px rgba(44, 62, 80, 0.2); /* shadow biru tua */
 }
 
 h2 {
     margin-bottom: 15px;
-    color: #e84393;
+    color: #2c3e50;
 }
 
 form label {
@@ -69,23 +69,32 @@ form textarea,
 form select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #f8a5c2;
+    border: 1px solid #5dade2;
     border-radius: 5px;
     margin-bottom: 15px;
 }
 
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border: 1px solid #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
 form button {
-    background: #fd79a8; /* pink soft */
+    background: #3498db; /* biru soft */
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    transition: background 0.3s ease;
 }
 
 form button:hover {
-    background: #e84393; /* pink lebih gelap */
+    background: #2c3e50; /* biru tua */
 }
 
 table {
@@ -95,18 +104,18 @@ table {
 
 table th,
 table td {
-    border: 1px solid #f8a5c2;
+    border: 1px solid #5dade2;
     padding: 10px;
     text-align: left;
 }
 
 table th {
-    background: #e84393;
+    background: #2c3e50;
     color: #fff;
 }
 
 footer {
-    background: #e84393;
+    background: #2c3e50;
     color: #fff;
     text-align: center;
     padding: 15px;
