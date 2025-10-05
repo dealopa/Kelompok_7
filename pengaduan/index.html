@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pengaduan Masyarakat</title>
-    <!-- Hubungkan CSS -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <header>
-      <h1>Sistem Pengaduan Masyarakat</h1>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#form">Formulir Pengaduan</a>
-        <a href="#list">Daftar Pengaduan</a>
-      </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pengaduan Masyarakat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Atas -->
+    <header class="topbar">
+        <h1>Sistem Pengaduan Masyarakat</h1>
     </header>
 
-    <div class="container">
-      <!-- Halaman Home -->
-      <section id="home" class="card">
-        <h2>Selamat Datang</h2>
-        <p>
-          Website ini dibuat untuk memudahkan masyarakat dalam menyampaikan
-          aspirasi, keluhan, maupun laporan terkait pelayanan publik. Silakan
-          isi formulir pengaduan dan pantau status laporan Anda.
-        </p>
-      </section>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#home" class="active">🏠 Home</a></li>
+                <li><a href="#form">📝 Formulir Pengaduan</a></li>
+                <li><a href="#list">📋 Daftar Pengaduan</a></li>
+            </ul>
+        </aside>
 
-      <!-- Formulir Pengaduan -->
-      <section id="form" class="card">
-        <h2>Formulir Pengaduan</h2>
-        <form id="pengaduanForm">
-          <label for="nama">Nama Lengkap</label>
-          <input
-            type="text"
-            id="nama"
-            placeholder="Masukkan nama Anda"
-            required
-          />
+        <!-- Konten utama -->
+        <main class="content">
+            <!-- Home -->
+            <section id="home" class="card">
+                <h2>Selamat Datang</h2>
+                <p>
+                    Website ini dibuat untuk memudahkan masyarakat dalam menyampaikan aspirasi, keluhan, maupun laporan terkait pelayanan publik.
+                </p>
+                <p>Gunakan menu di samping untuk mengisi formulir atau melihat daftar pengaduan.</p>
+            </section>
 
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="contoh@email.com"
-            required
-          />
+            <!-- Formulir -->
+            <section id="form" class="card hidden">
+                <h2>Formulir Pengaduan</h2>
+                <form id="pengaduanForm">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
 
-          <label for="kategori">Kategori Pengaduan</label>
-          <select id="kategori" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="contoh@email.com" required>
+
+                    <label for="kategori">Kategori Pengaduan</label>
+                    <select id="kategori" required>
             <option value="">-- Pilih Kategori --</option>
             <option>Infrastruktur</option>
             <option>Keamanan</option>
@@ -59,43 +55,34 @@
             <option>Lainnya</option>
           </select>
 
-          <label for="isi">Isi Pengaduan</label>
-          <textarea
-            id="isi"
-            rows="5"
-            placeholder="Tulis pengaduan Anda di sini..."
-            required
-          ></textarea>
+                    <label for="isi">Isi Pengaduan</label>
+                    <textarea id="isi" rows="5" placeholder="Tulis pengaduan Anda..." required></textarea>
 
-          <button type="submit">Kirim Pengaduan</button>
-        </form>
-      </section>
+                    <button type="submit">Kirim Pengaduan</button>
+                </form>
+            </section>
 
-      <!-- Daftar Pengaduan -->
-      <section id="list" class="card">
-        <h2>Daftar Pengaduan</h2>
-        <table id="tabelPengaduan">
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>Nama</th>
-              <th>Kategori</th>
-              <th>Pengaduan</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Data akan ditambahkan lewat JS -->
-          </tbody>
-        </table>
-      </section>
+            <!-- Daftar Pengaduan -->
+            <section id="list" class="card hidden">
+                <h2>Daftar Pengaduan</h2>
+                <table id="tabelPengaduan">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Kategori</th>
+                            <th>Pengaduan</th>
+                            <th>Status</th>
+                            <th>Balasan</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </main>
     </div>
 
-    <footer>
-      <p>&copy; 2025 Sistem Pengaduan Masyarakat. Semua Hak Dilindungi.</p>
-    </footer>
-
-    <!-- Hubungkan JavaScript -->
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
